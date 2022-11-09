@@ -1,3 +1,12 @@
 from django.shortcuts import render
+from models import icecream_db
 
-# Create your views here.
+
+def icecream_details(request, pk):
+    name = icecream_db[pk]['name']
+    description = icecream_db[pk]['description']
+    context = {
+        'name': name,
+        'description': description,
+    }
+    return render(request, 'icecream/icecream_detail', context)
