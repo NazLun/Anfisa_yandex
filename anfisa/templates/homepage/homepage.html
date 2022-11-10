@@ -1,17 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home page</title>
-</head>
-<body>
-    <h1>Anfisa for friends</h1>
-    <img src=".images/img.jpg">
-    <br>
-    <p>
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+  </head>
+  <body>
+      <h1>Анфиса для друзей</h1>
+       <img src="https://code.s3.yandex.net/backend-developer/Anfisa/24.png">
+       <br>
+      <p>
         {{ friend_output }}
       </p>
       <p>
@@ -21,12 +17,14 @@
         {{ conclusion }}
       </p>
       <form action="/" method="post">
-        <h2>Choose a friend</h2>
+          {% csrf_token %}
+        <h2>Выберите друга</h2>
           {{ friends|safe }}
-        <h2>Choose a icecream</h2>
+        <h2>Выберите мороженое</h2>
           {{ icecreams|safe }}
         <br>
-        <input type="submit" value="Treat">
+        <input type="submit" value="Угостить">
       </form>
-</body>
+
+  </body>
 </html>

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from models import icecream_db
+from .models import icecream_db
 
 
 def icecream_details(request, pk):
@@ -9,4 +9,4 @@ def icecream_details(request, pk):
         'name': name,
         'description': description,
     }
-    return render(request, 'icecream/icecream_detail', context)
+    return render(request, 'icecream/icecream_detail.html', context)

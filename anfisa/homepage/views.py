@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from anfisa.anfisa.models import friends_db
-from anfisa.icecream.models import icecream_db
-from anfisa.anfisa.services import what_weather, get_temperature, what_conclusion
+from anfisa4friends.models import friends_db
+from icecream.models import icecream_db
+from anfisa4friends.services import what_weather, what_temperature, what_conclusion
 
 
 def index(request):
@@ -14,7 +14,7 @@ def index(request):
 
     for friend in friends_db:
         friends += (f'<input type="radio" name="friend"'
-                   f' required value="{friend}">{friend}<br>')
+                    f' required value="{friend}">{friend}<br>')
 
     for i in range(len(icecream_db)):
         ice_form = (f'<input type="radio" name="icecream" required'
@@ -43,4 +43,4 @@ def index(request):
         'conclusion': conclusion,
 
     }
-    return render(request, 'homepage/index.html', context)
+    return render(request, 'homepage/homepage.html', context)

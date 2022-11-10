@@ -16,7 +16,7 @@ def what_weather(city):
         return '<Error in weather server. Try later>'
 
 
-def get_temperature(weather):
+def what_temperature(weather):
     if (weather == '<network error>' or
         weather == '<Error in weather server. Try later>'):
         return weather

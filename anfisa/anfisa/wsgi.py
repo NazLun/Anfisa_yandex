@@ -1,5 +1,5 @@
 """
-WSGI config for anfisa4friends project.
+WSGI config for anfisa project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'anfisa4friends.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'anfisa.settings')
 
 application = get_wsgi_application()

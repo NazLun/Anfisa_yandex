@@ -1,4 +1,4 @@
-"""anfisa4friends URL Configuration
+"""anfisa URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -13,12 +13,20 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
+
+
+# from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('homepage/urls')),
-    path('icecream/', include('icecream/urls')),
-    path('anfisa', include('anfisa/urls')),
+    path('', include('homepage.urls')),
+    path('icecream/', include('icecream.urls')),
 ]
+
+# urlpatterns = [
+#     # path('admin/', admin.site.urls),
+#     path('', include('homepage/urls')),
+#     path('icecream/', include('icecream/urls')),
+#     # path('anfisa4friends', include('anfisa4friends/urls')),
+# ]
